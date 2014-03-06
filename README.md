@@ -1,22 +1,24 @@
-* Rename the directory abiquo_upgrade_1.8.5-HFX using the current release name
+* Rename the directory abiquo-upgrade-2.x.x using the current release name
 
-* put binary RPMs in abiquo_upgrade_1.8.5-HFX directory
+* put binary RPMs in abiquo-upgrade-2.x.x directory
 
-* use createrepo inside abiquo_upgrade_1.8.5-HFX
+* Sign packages with Abiquo's key
 
-    cd abiquo_upgrade_1.8.5-HFX && createrepo -s sha -d .
+* use createrepo inside abiquo-upgrade-2.x.x
+
+    cd abiquo_upgrade_2.x.x && createrepo -s sha -d .
 
 * tweak install.sh.in changing ABI_VERSION and SUPPORTED_VERSION
   values
 
-* create a tarball from abiquo_upgrade_1.8.5-HFX
+* create a tarball from abiquo-upgrade-2.x.x
 
-  tar czf abiquo_upgrade_1.8.5-HFX.tar.gz abiquo_upgrade_1.8.5-HFX
+  tar czf abiquo-upgrade-2.x.x.tar.gz abiquo-upgrade-2.x.x
 
 * run  make-installer.sh
     
-    make-installer.sh abiquo_upgrade_1.8.5_HFX.tar.gz
+    make-installer.sh abiquo-upgrade-2.x.x.tar.gz
 
 * rename install.sh to whatever you want
 
-    mv install.sh abiquo_upgrade_1.8.5-HFX.bin
+    mv install.sh abiquo-upgrade-2.x.x.bin
